@@ -1,0 +1,23 @@
+{
+  "name": "nyc_monkeypox_vaccine_sites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y-sherap/NYC_Monkeypox_Vaccine_Sites.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y-sherap/NYC_Monkeypox_Vaccine_Sites/issues"
+  },
+  "homepage": "https://github.com/y-sherap/NYC_Monkeypox_Vaccine_Sites#readme",
+  "dependencies": {
+    "mongoose": "^6.4.6"
+  }
+}
