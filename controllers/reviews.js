@@ -16,11 +16,11 @@ const createReview = async (req, res) => {
 const deleteReview = async ( req, res ) => {
   try {
       const { id } = req.params
-      const deleted = await Chart.findByIdAndDelete( id )
+      const deleted = await review.findByIdAndDelete( id )
       if ( deleted ) {
-          return res.status( 200 ).send( `Chart with id:${ id } deleted` )
+          return res.status( 200 ).send( `Review deleted` )
       }
-      throw new Error( `Chart with id:${ id } not found` )
+      throw new Error( `Review not found` )
   } catch ( error ) {
       return res.status( 500 ).json( error.message )
   }
@@ -28,7 +28,7 @@ const deleteReview = async ( req, res ) => {
 
 const updateReview = async (req, res) => {
   try {
-    const updatedReview = await Review.findByIdAndUpdate(req.params.id, req.body, {
+    const review = await Review.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     })
     res.status(200).json(post)
