@@ -4,9 +4,10 @@ const router = Router();
 
 router.get('/', (req, res) => res.send('This is root!'))
 
-// Home Page - Boroughs
-
 router.post('/reviews', reviews.createReview)
+router.delete('/reviews/:id', reviews.deleteReview)
+router.put('/reviews/:id', reviews.updateReview)
+router.get('/reviews', reviews.getAllReviews)
 
 
 module.exports = router;

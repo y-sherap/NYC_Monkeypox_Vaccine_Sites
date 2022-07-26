@@ -28,14 +28,13 @@ const deleteReview = async ( req, res ) => {
 
 const updateReview = async (req, res) => {
   try {
-    const review = await Review.findByIdAndUpdate(req.params.id, req.body, {
-      new: true
-    })
-    res.status(200).json(post)
+      const review = await Review.findByIdAndUpdate(req.params.id, req.body, { new: true})
+      res.status(200).json(review)
   } catch (error) {
-    return res.status(500).send(error.message)
+      return res.status(500).send(error.message);
   }
 }
+
 
 const getAllReviews = async (req, res) => {
   try {
@@ -45,11 +44,6 @@ const getAllReviews = async (req, res) => {
       return res.status(500).send(error.message);
   }
 }
-
-
-
-
-
 
 module.exports = {
   createReview,
