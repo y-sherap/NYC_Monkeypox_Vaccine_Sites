@@ -4,7 +4,7 @@ const clinicSchema = require('./clinic')
 const boroughSchema = require('./borough')
 
 const Review = mongoose.model('Review', reviewSchema)
-const Clinic = mongoose.model('Park', clinicSchema)
+const Clinic = mongoose.model('Clinic', clinicSchema)
 const Borough = mongoose.model('Borough', boroughSchema)
 
 module.exports = {
