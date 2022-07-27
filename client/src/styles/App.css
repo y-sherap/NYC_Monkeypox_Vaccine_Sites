@@ -12,17 +12,34 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
+/* .App-header {
   background-color: #2bb577;
-  min-height: 10vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: rgb(14, 13, 13);
+}  */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
+  background-color: #123C91;
+  padding: 1em;
+  min-height: 2em;
+  font-family: ‘Arial’;
 }
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
 
 .App-link {
   color: #61dafb;
