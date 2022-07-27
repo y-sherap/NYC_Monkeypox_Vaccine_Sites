@@ -13,16 +13,16 @@ const createReview = async (req, res) => {
 }
 
 
-const deleteReview = async ( req, res ) => {
+const deleteReview = async (req, res) => {
   try {
-      const { id } = req.params
-      const deleted = await review.findByIdAndDelete( id )
-      if ( deleted ) {
-          return res.status( 200 ).send( `Review deleted` )
+      const { id } = req.params;
+      const deleted = await Review.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Review deleted");
       }
-      throw new Error( `Review not found` )
-  } catch ( error ) {
-      return res.status( 500 ).json( error.message )
+      throw new Error("Review not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
   }
 }
 
