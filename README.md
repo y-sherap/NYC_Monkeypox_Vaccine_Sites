@@ -59,7 +59,7 @@ ADD VIDEO HERE
 
 #### **Component Hierarchy Diagram**
 
-![CHD](images/p2_CH.png)
+![CHD](images/new_component_hierarchy.png)
 
 
 ---
