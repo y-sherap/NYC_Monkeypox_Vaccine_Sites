@@ -6,12 +6,14 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQPage from './pages/FAQPage'
+import BoroughClinicDetails from './components/BoroughClinicDetails'
 // import ClinicsPage from './pages/ClinicsPage'
 // import ReviewsPage from './pages/ReviewsPage'
 
 const App = () => {
 
   const [boroughs, setBoroughs] = useState([])
+  const [clinics, setClinics] = useState([])
 
   useEffect(() => {
     const getBoroughs = async () => {
@@ -23,20 +25,36 @@ const App = () => {
     getBoroughs()
   }, [])
 
+  useEffect(() => {
+    const getClinics = async () => {
+      const response = await axios.get('http://localhost:3001/api/clinics')
+      console.log(response.data.clinics)
+      setClinics(response.data.clinics)
+      // narrowing down the data that i need to access from my database
+    }
+    getClinics()
+  }, [])
+
 return (
   <div className="App">
     <header className="App-header">
       <NavBar />
     </header>
-    {/* <main> */}
+
      <Routes>
         <Route path="/" element={ <Home boroughs={boroughs}  /> } />
         <Route path="about" element={ <About /> } />
         <Route path="faq" element={ <FAQPage /> } /> 
-       {/* <Route path="/clinics" element={ <ClinicsPage /> } />
-        <Route path="/reviews" element={ <ReviewsPage /> } />    */}
+        <Route 
+          path="borough/:id"
+          element={
+            <BoroughClinicDetails
+              boroughs={boroughs}
+              clinics={clinics}
+              />
+          }
+          />
        </Routes> 
-    {/* </main> */}
   </div>
 )
 }
