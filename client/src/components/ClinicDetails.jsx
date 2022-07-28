@@ -11,8 +11,8 @@ const ClinicDetails = (props) => {
       {arr.map((clinic) => (
         <div className="clinic-card" key={clinic.name}>
           <div className="border">
-            <div className="pfp">
-              <h2 id="name">{clinic.name}</h2>
+            <div className="clinic-name">
+              <p id="name">{clinic.name}</p>
             </div>
             <p id="location">{clinic.location}</p>
             <p id="hours">{clinic.hours}</p>

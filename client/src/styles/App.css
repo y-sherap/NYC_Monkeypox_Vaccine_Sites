@@ -28,10 +28,11 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: #649fb4;
-  padding: 1em;
+  background-color: #ca8025;
+  padding: .5em;
   min-height: 2em;
-  font-family: ‘Arial’;
+  font-family: ‘Arial’; 
+  box-shadow: 0 1px 8px #ddd;
 }
 .navbar a {
   text-decoration: none;
