@@ -54,3 +54,33 @@
     transform: rotate(360deg);
   }
 }
+
+.clinic-test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clinic-card {
+  border: 2px solid black;
+  width: 60vw;
+  text-align: left;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vw;
+  margin-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#clinicTitle {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.readReviewsBTN{
+  background-color:  #aaab9d;
+}

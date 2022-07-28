@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 const BoroughCard = (props) => {
   let navigate = useNavigate()
 
-  const showBorough = (id) => {
+
+const showBorough = (id) => {
     navigate(`borough/${id}`)
   }
 
@@ -11,6 +12,9 @@ const BoroughCard = (props) => {
         <div onClick={() => showBorough(props.borough._id)}>
           <div className="borough">
             <h2>{props.borough.name}</h2>
+            <img src={props.borough.image} alt="Map" />
+
+
           </div>
         </div>
   )

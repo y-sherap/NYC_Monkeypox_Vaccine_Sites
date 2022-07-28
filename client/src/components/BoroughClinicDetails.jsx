@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import ClinicDetails from './ClinicDetails'
 
 const BoroughClinicDetails = (props) => {
@@ -24,9 +23,10 @@ const BoroughClinicDetails = (props) => {
         <h3>Clinic List</h3>
         <div className="clinic-list">
           {/* BRING IN CLINIC */}
-          {props.clinics.map((clinic) => (
+          {/* {props.clinics.map((clinic) => ( */}
           <ClinicDetails clinics={props.clinics} id={id} />
-          ))}
+
+          {/* // ))} */}
         </div>
           
       </div>
