@@ -3,20 +3,16 @@ import { useNavigate } from 'react-router-dom'
 const BoroughCard = (props) => {
   let navigate = useNavigate()
 
-  const showBorough = (boroughs) => {
-    navigate(`${boroughs._id}`)
+  const showBorough = (id) => {
+    navigate(`borough/${id}`)
   }
 
   return (
-    <div className="borough-list">
-      {props.boroughs?.map((boroughs) => (
-        <div key={boroughs.name} onClick={() => showBorough(boroughs)}>
+        <div onClick={() => showBorough(props.borough._id)}>
           <div className="borough">
-            <h2>{boroughs.name}</h2>
+            <h2>{props.borough.name}</h2>
           </div>
         </div>
-      ))}
-    </div>
   )
 }
 

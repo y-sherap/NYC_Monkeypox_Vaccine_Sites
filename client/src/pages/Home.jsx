@@ -1,3 +1,21 @@
+import BoroughCard from '../components/BoroughCard'
+
+const Home = (props) => {
+  
+  return (
+    <div className="borough-list">
+      <h1>NYC Monkeypox Vaccination Sites</h1>
+      {props.boroughs?.map((borough) => (
+          <BoroughCard borough={borough} key={borough._id}/>
+      ))}
+    </div>
+  )
+}
+
+export default Home
+
+
+
 // import { useNavigate } from 'react-router-dom'
 
 // const Home = (props) => {
@@ -24,16 +42,8 @@
 // export default Home
 
 
-import BoroughCard from '../components/BoroughCard'
+{/* <DataProvider render={data => (
+  <h1>Hello {data.target}</h1>
+)}/>  */}
 
-const Home = (props) => {
-  
-  return (
-    <div>
-      <h1>NYC Monkeypox Vaccination Sites</h1>
-      <BoroughCard boroughs={props.boroughs} />
-    </div>
-  )
-}
 
-export default Home

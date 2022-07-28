@@ -6,16 +6,16 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQPage from './pages/FAQPage'
-import ClinicsPage from './pages/ClinicsPage'
-import ReviewsPage from './pages/ReviewsPage'
+// import ClinicsPage from './pages/ClinicsPage'
+// import ReviewsPage from './pages/ReviewsPage'
 
 const App = () => {
 
-  const [borough, setBoroughs] = useState([])
+  const [boroughs, setBoroughs] = useState([])
 
   useEffect(() => {
     const getBoroughs = async () => {
-      const response = await axios.get('http://localhost:3001/api/borough')
+      const response = await axios.get('http://localhost:3001/api/boroughs')
       console.log(response.data.boroughs)
       setBoroughs(response.data.boroughs)
       // narrowing down the data that i need to access from my database
@@ -30,11 +30,11 @@ return (
     </header>
     {/* <main> */}
      <Routes>
-        <Route path="/" element={ <Home borough={borough}  /> } />
+        <Route path="/" element={ <Home boroughs={boroughs}  /> } />
         <Route path="about" element={ <About /> } />
         <Route path="faq" element={ <FAQPage /> } /> 
-       <Route path="/clinics" element={ <ClinicsPage /> } />
-        <Route path="/reviews" element={ <ReviewsPage /> } />   
+       {/* <Route path="/clinics" element={ <ClinicsPage /> } />
+        <Route path="/reviews" element={ <ReviewsPage /> } />    */}
        </Routes> 
     {/* </main> */}
   </div>
