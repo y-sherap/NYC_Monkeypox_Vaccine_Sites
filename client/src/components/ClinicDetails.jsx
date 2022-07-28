@@ -17,7 +17,8 @@ const ClinicDetails = (props) => {
             <p id="location">{clinic.location}</p>
             <p id="hours">{clinic.hours}</p>
             <p id="appt-type">{clinic.appt_type}</p>
-            <p id="location">{clinic.location}</p>
+            <button>Read Reviews</button>
+
           </div>
         </div>
       ))}

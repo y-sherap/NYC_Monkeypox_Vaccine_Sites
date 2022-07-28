@@ -6,6 +6,7 @@ import ClinicDetails from './ClinicDetails'
 const BoroughClinicDetails = (props) => {
   const [borough, setBorough] = useState('')
 
+
   let { id } = useParams()
 
   useEffect(() => {
@@ -14,6 +15,7 @@ const BoroughClinicDetails = (props) => {
   }, [props.boroughs, id])
 
   return borough ? (
+   
     <div className="detail">
       <div className="detail-header">
         <h1>{borough.name}</h1>{' '}
@@ -22,15 +24,18 @@ const BoroughClinicDetails = (props) => {
         <h3>Clinic List</h3>
         <div className="clinic-list">
           {/* BRING IN CLINIC */}
+          {props.clinics.map((clinic) => (
           <ClinicDetails clinics={props.clinics} id={id} />
+          ))}
         </div>
+          
       </div>
-
-      <div className="back">
-        <Link to="/">Back</Link>
-      </div>
+          
     </div>
-  ) : null
+    ) : null
+  
 }
+
+
 
 export default BoroughClinicDetails
