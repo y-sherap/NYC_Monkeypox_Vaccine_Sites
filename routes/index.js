@@ -10,14 +10,21 @@ router.get('/boroughs', borough.getAllBoroughs)
 router.get('/borough/:id', borough.getBoroughById)
 
 router.get('/clinics', clinic.getAllClinics)
+router.post('/clinics/:id', clinic.createClinic)
+router.delete('/clinics/:id', clinic.deleteClinic)
+router.put('/clinics/:id', clinic.updateClinic)
+
+
+
+
 // router.get('/clinics/:id', clinic.getClinicById)
 // router.get('/boroughs/:id', getClinicByBoroughId)
 // consider renaming it to borough ID 
 
-router.post('/reviews', reviews.createReview)
-router.delete('/reviews/:id', reviews.deleteReview)
-router.put('/reviews/:id', reviews.updateReview)
-router.get('/reviews', reviews.getAllReviews)
+// router.post('/reviews', reviews.createReview)
+// router.delete('/reviews/:id', reviews.deleteReview)
+// router.put('/reviews/:id', reviews.updateReview)
+// router.get('/reviews', reviews.getAllReviews)
 
 
 module.exports = router;
