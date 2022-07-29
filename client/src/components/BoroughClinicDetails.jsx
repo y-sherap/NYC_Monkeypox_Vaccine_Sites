@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ClinicDetails from './ClinicDetails'
+import Form from './Form'
+
 
 const BoroughClinicDetails = (props) => {
   const [borough, setBorough] = useState('')
@@ -21,12 +23,16 @@ const BoroughClinicDetails = (props) => {
       </div>
       <div className="clinics">
         <h3>Clinic List</h3>
+        <div className="clinicform">
+          <Form id={id} clinics={props.clinics} />
+        </div>
+        
+
+
         <div className="clinic-list">
           {/* BRING IN CLINIC */}
           {/* {props.clinics.map((clinic) => ( */}
           <ClinicDetails clinics={props.clinics} id={id} />
-
-          {/* // ))} */}
         </div>
           
       </div>
