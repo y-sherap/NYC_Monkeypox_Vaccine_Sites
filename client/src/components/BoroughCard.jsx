@@ -9,12 +9,10 @@ const showBorough = (id) => {
   }
 
   return (
-        <div onClick={() => showBorough(props.borough._id)}>
+        <div onClick={() => showBorough(props.borough._id)} className="borough-test">
           <div className="borough">
             <h2>{props.borough.name}</h2>
             <img src={props.borough.image} alt="Map" />
-
-
           </div>
         </div>
   )

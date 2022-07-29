@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ClinicDetails from './ClinicDetails'
-import Form from './Form'
+import FormCard from './FormCard'
+import axios from 'axios'
 
 
 const BoroughClinicDetails = (props) => {
   const [borough, setBorough] = useState('')
-
+  const [clinics, setClinics] = useState([])
 
   let { id } = useParams()
 
@@ -15,6 +16,17 @@ const BoroughClinicDetails = (props) => {
     setBorough(selectedBorough)
   }, [props.boroughs, id])
 
+  const getClinics = async () => {
+    const response = await axios.get(`http://localhost:3001/api/clinics/${id}`)
+    console.log(response.data.clinics)
+    setClinics(response.data.clinics)
+    // narrowing down the data that i need to access from my database
+  }
+  useEffect(() => {
+    getClinics()
+  }, [])
+
+
   return borough ? (
    
     <div className="detail">
@@ -22,17 +34,15 @@ const BoroughClinicDetails = (props) => {
         <h1>{borough.name}</h1>{' '}
       </div>
       <div className="clinics">
-        <h3>Clinic List</h3>
         <div className="clinicform">
-          <Form id={id} clinics={props.clinics} />
+          <FormCard id={id} clinics={clinics} reloadClinicsPage={getClinics}/>
         </div>
-        
-
-
+        <h3>Clinic List</h3>
+        <p>Schedule your vaccine appointment <a href='https://vax4nyc.nyc.gov/patient/s/monkeypox'>HERE</a></p>
         <div className="clinic-list">
           {/* BRING IN CLINIC */}
           {/* {props.clinics.map((clinic) => ( */}
-          <ClinicDetails clinics={props.clinics} id={id} />
+          <ClinicDetails clinics={clinics} id={id} reloadClinicsPage={getClinics}/>
         </div>
           
       </div>
@@ -41,8 +51,6 @@ const BoroughClinicDetails = (props) => {
     ) : null
   
 }
-
-
 
 export default BoroughClinicDetails
 

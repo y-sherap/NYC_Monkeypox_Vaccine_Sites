@@ -13,7 +13,6 @@ import BoroughClinicDetails from './components/BoroughClinicDetails'
 const App = () => {
 
   const [boroughs, setBoroughs] = useState([])
-  const [clinics, setClinics] = useState([])
 
   useEffect(() => {
     const getBoroughs = async () => {
@@ -23,16 +22,6 @@ const App = () => {
       // narrowing down the data that i need to access from my database
     }
     getBoroughs()
-  }, [])
-
-  useEffect(() => {
-    const getClinics = async () => {
-      const response = await axios.get('http://localhost:3001/api/clinics')
-      console.log(response.data.clinics)
-      setClinics(response.data.clinics)
-      // narrowing down the data that i need to access from my database
-    }
-    getClinics()
   }, [])
 
 return (
@@ -50,10 +39,10 @@ return (
           element={
             <BoroughClinicDetails
               boroughs={boroughs}
-              clinics={clinics}
               />
           }
           />
+          <Route path="borough/:boroughid/:id" element={<EditClinic   } />  />
        </Routes> 
   </div>
 )

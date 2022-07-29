@@ -1,8 +1,15 @@
+import axios from 'axios'
+
 const ClinicDetails = (props) => {
   let arr = []
   for (let i = 0; i < props.clinics.length; i++) {
     if (props.id === props.clinics[i].borough) {
       arr.push(props.clinics[i])
+    }
+
+    const deleteClinic = async (id) => {
+    await axios.delete(`http://localhost:3001/api/clinics/${id}`)
+    props.reloadClinicsPage()
     }
 
   return (
@@ -16,13 +23,18 @@ const ClinicDetails = (props) => {
             <div className="clinic-name">
               <p id="clinicTitle">{clinic.name}</p>
             </div>
-            <p id="location">{clinic.location}</p>
-            <p id="hours">{clinic.hours}</p>
-            <p id="appt-type">{clinic.appt_type}</p>
-            <button className="editClinic">Edit</button>
-            <button className="updateClinic">Update</button>
-            <button className="deleteClinic">Delete</button>
-
+              <p id="location">{clinic.location}</p>
+              <p id="hours">{clinic.hours}</p>
+              <p id="appt-type">{clinic.appt_type}</p>
+            <div>
+              <button className="editClinic">Edit</button>
+              <button 
+                className="deleteClinic"
+                onClick={() => deleteClinic(clinic._id)
+                }
+              
+              >Delete</button>
+            </div>
           </div>
         </div>
       ))}

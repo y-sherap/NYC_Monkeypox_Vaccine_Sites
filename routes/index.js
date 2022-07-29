@@ -9,7 +9,9 @@ router.get('/', (req, res) => res.send('This is root!'))
 router.get('/boroughs', borough.getAllBoroughs)
 router.get('/borough/:id', borough.getBoroughById)
 
-router.get('/clinics', clinic.getAllClinics)
+
+router.get('/clinic/:id', clinic.getClinicById)
+router.get('/clinics/:id', clinic.getAllClinics)
 router.post('/clinics/:id', clinic.createClinic)
 router.delete('/clinics/:id', clinic.deleteClinic)
 router.put('/clinics/:id', clinic.updateClinic)

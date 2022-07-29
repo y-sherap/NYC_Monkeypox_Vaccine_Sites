@@ -7,9 +7,9 @@ const Form = (props) => {
   const [hours, setHours] = useState('')
   const [appt_type, setAppt_type] = useState('')
 
-
+// await suspends execution until returned promise is fulfilled
   const addClinic = async (e) => {
-    await axios.post('http://localhost:3001/reviews/' + props.id, {
+    await axios.post('http://localhost:3001/api/clinics/' + props.id, {
       name: name,
       location: location,
       hours: hours,
@@ -17,6 +17,7 @@ const Form = (props) => {
     })
 
     setName('')
+    props.reloadClinicsPage()
   }
 
   const changeName = (event) => {
@@ -31,20 +32,21 @@ const Form = (props) => {
     let n = event.target.value
     setHours(n)
   }
-  const changeAppt_Type = (event) => {
+  const changeAppt_type = (event) => {
     let n = event.target.value
     setAppt_type(n)
   }
 
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     addClinic(e)
-    console.lot(props.clinics)
+    console.log(props.clinics)
   }
 
   return (
     <div className="form">
-      <h1>Add A Clinic</h1>
+      <p className="addAClinicTitle">Add A Clinic</p>
 
       <div className="input-div">
         <form onSubmit={handleSubmit}>
@@ -55,34 +57,35 @@ const Form = (props) => {
               value={name}
               onChange={changeName}
               name={'name'}
-              placeholder={'name'}
+              placeholder={'Clinic Name'}
             />
             <input
               type="text"
               value={location}
               onChange={changeLocation}
               name={'location'}
-              placeholder={'address'}
+              placeholder={'Address'}
             />
             <input
               type="text"
               value={hours}
               onChange={changeHours}
               name={'hours'}
-              placeholder={'hours of operation'}
+              placeholder={'Hours of Operation'}
             />
-            <select id="appttype">
+              <input
+              type="text"
+              value={appt_type}
+              onChange={changeAppt_type}
+              name={'appt_type'}
+              placeholder={'Appointment Type'}
+            />
+
+            {/* <select id="appttype">
               <option value="appointmentOnly">Appointment Only</option>
               <option value="walkIn">Walk In</option>
-            </select>
-          {/* <input
-            type="text"
-            value={appt_type}
-            onChange={changeAppt_Type}
-            name={'text'}
-            placeholder={'appointment type'}
-            className="apptType"
-          /> */}
+              onChange={}
+            </select> */}
             <button id="form-submit">Submit</button>
           </div>
           </form>
