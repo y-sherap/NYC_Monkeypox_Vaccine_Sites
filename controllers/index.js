@@ -1,7 +1,7 @@
-const Review = require("./reviews")
-// const Borough = require('../models/borough');
-// const clinic = require('../models/clinic');
+// const Review = require("./reviews")
+// // const Borough = require('../models/borough');
+// // const clinic = require('../models/clinic');
 
-module.exports = {
-    createReview
-}
+// module.exports = {
+//     createReview
+// }

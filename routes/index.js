@@ -6,11 +6,13 @@ const router = Router();
 
 router.get('/', (req, res) => res.send('This is root!'))
 
-router.get('/borough', borough.getAllBoroughs)
+router.get('/boroughs', borough.getAllBoroughs)
 router.get('/borough/:id', borough.getBoroughById)
 
-router.get('/clinic', clinic.getAllClinics)
-router.get('/clinic/:id', clinic.getClinicById)
+router.get('/clinics', clinic.getAllClinics)
+// router.get('/clinics/:id', clinic.getClinicById)
+// router.get('/boroughs/:id', getClinicByBoroughId)
+// consider renaming it to borough ID 
 
 router.post('/reviews', reviews.createReview)
 router.delete('/reviews/:id', reviews.deleteReview)

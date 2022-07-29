@@ -24,6 +24,7 @@ const getBoroughById = async (req, res) => {
 }
 
 
+
 module.exports = {
   getAllBoroughs,
   getBoroughById,

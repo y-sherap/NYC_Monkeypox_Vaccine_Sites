@@ -10,26 +10,36 @@ const main = async () => {
 
   const bronx = await new Borough({
     name: 'Bronx',
+    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
+
   })
   const bronxAwait = await bronx.save()
 
   const brooklyn = await new Borough({
     name: 'Brooklyn',
+    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
+
   })
   const brooklynAwait = await brooklyn.save()
 
   const manhattan = await new Borough({
     name: 'Manhattan',
+    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
   })
+
   const manhattanAwait = await manhattan.save()
 
   const queens = await new Borough({
     name: 'Queens',
+    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
+
   })
   const queensAwait = await queens.save()
 
   const statenIsland = await new Borough({
     name: 'Staten Island',
+    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
+
   })
   const statenIslandAwait = await statenIsland.save()
 
