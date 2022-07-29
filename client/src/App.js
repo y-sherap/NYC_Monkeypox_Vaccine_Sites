@@ -4,12 +4,11 @@ import './styles/App.css'
 import axios from 'axios'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
-import About from './pages/About'
+
 import FAQPage from './pages/FAQPage'
 import BoroughClinicDetails from './components/BoroughClinicDetails'
 // import EditClinic from './pages/EditClinic'
-// import ClinicsPage from './pages/ClinicsPage'
-// import ReviewsPage from './pages/ReviewsPage'
+
 
 const App = () => {
 
@@ -33,7 +32,7 @@ return (
 
      <Routes>
         <Route path="/" element={ <Home boroughs={boroughs}  /> } />
-        <Route path="about" element={ <About /> } />
+        {/* <Route path="about" element={ <About /> } /> */}
         <Route path="faq" element={ <FAQPage /> } /> 
         <Route 
           path="borough/:id"

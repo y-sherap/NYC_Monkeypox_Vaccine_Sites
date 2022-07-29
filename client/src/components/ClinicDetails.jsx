@@ -23,9 +23,11 @@ const ClinicDetails = (props) => {
             <div className="clinic-name">
               <p id="clinicTitle">{clinic.name}</p>
             </div>
+            <div className="clinicValues">
               <p id="location">{clinic.location}</p>
               <p id="hours">{clinic.hours}</p>
               <p id="appt-type">{clinic.appt_type}</p>
+            </div>
             <div>
               <button className="editClinic">Edit</button>
               <button 

@@ -67,25 +67,12 @@ html {
   color: white;
   font-weight: bold;
   margin-left: 1em;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(232, 235, 23);
 }
 
 .navbar a.active {
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(232, 235, 23);
 }
-
-
-/* .navHome { */
-  /* position: left; */
-  /* font-size: 1.5em;
-  margin: left;
-} */
-/* 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-} */
 
 
 .App-link {
@@ -109,22 +96,33 @@ html {
 }
 
 .clinic-card {
-  /* border: 2px solid black; */
-  width: 30vw;
-  text-align: left;
+  width: 24vw;
+  height: 10vw;
+  text-align: center;
+  padding-top: 2vw;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vw;
   margin-bottom: 1vh;
   display: flex;
   flex-direction: column;
-  background-color: white;
   text-align: center;
   cursor: pointer;
-  background-color: #dfdfce;
+  background-color: #f3f3ec;
+  /* opacity: 0.9; */
+  box-shadow: 0 1px 6px rgba(1, 1, 1, 0.5), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  justify-content: center;
 }
 
+.clinicValues {
+  margin: 0;
+}
 
+.homeTitle {
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+}
 
 
 
@@ -155,28 +153,13 @@ html {
   justify-content: center;
 }
 
+.borough:hover {
+
+}
+
 
 #clinicTitle {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* .readReviewsBTN{
-  background-color:  #ffffff;
-  border: 2px solid rgb(32, 116, 200);
-} */
-
-.aboutTitle {
-  font-size: 2em;
-}
-.aboutText {
-  max-width: 50%;
-  text-align: center;
-  padding-top: 2vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-bottom: 1vw;
-  margin-bottom: 1vh;
-  background-color: #c8c8c0;
-  cursor: pointer;
-}
