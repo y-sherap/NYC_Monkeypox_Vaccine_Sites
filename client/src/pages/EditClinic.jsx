@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const EditClinic = (props) => {
-
+  // let navigate = useNavigate()
   const [clinic, setClinic] = useState({})
+
 
   // need axios api request to find clinic
   useEffect(() => {
@@ -18,6 +19,15 @@ const EditClinic = (props) => {
 
   const { name, location, hours, appt_type, _id } = clinic
   // only render clinic if data is there
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    // addClinic(e)
+    // navigate('/borough/:boroughid/:id')
+    console.log(props.clinics)
+  }
+
   return _id && (
     <div>
          <form onSubmit={handleSubmit}>

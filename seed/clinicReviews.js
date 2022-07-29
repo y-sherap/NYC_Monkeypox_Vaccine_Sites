@@ -10,7 +10,7 @@ const main = async () => {
 
   const bronx = await new Borough({
     name: 'Bronx',
-    image: 'https://thumbs.dreamstime.com/z/manhattan-map-poster-new-york-city-borough-street-cityscape-aria-panorama-silhouette-aerial-view-typography-style-hudson-east-207537219.jpg'
+    image: 'https://f4.bcbits.com/img/0020924734_100.png',
 
   })
   const bronxAwait = await bronx.save()

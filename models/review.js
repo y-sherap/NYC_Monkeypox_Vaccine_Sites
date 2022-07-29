@@ -1,14 +1,16 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+// saving for future iteration
 
-const Review = new Schema (
-  {
-    name: { type: String, required: true },
-    date: { type: String, required: true },
-    wait_time: { type: String, required: true },
-    rating: { type: String, required: true },
-    clinic: { type: Schema.Types.ObjectId, ref: "Clinic" }},
-  { timestamps: true }
-)
+// const mongoose = require('mongoose')
+// const Schema = mongoose.Schema
 
-module.exports = Review
+// const Review = new Schema (
+//   {
+//     name: { type: String, required: true },
+//     date: { type: String, required: true },
+//     wait_time: { type: String, required: true },
+//     rating: { type: String, required: true },
+//     clinic: { type: Schema.Types.ObjectId, ref: "Clinic" }},
+//   { timestamps: true }
+// )
+
+// module.exports = Review

@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import FAQPage from './pages/FAQPage'
 import BoroughClinicDetails from './components/BoroughClinicDetails'
+// import EditClinic from './pages/EditClinic'
 // import ClinicsPage from './pages/ClinicsPage'
 // import ReviewsPage from './pages/ReviewsPage'
 
@@ -42,7 +43,7 @@ return (
               />
           }
           />
-          <Route path="borough/:boroughid/:id" element={<EditClinic   } />  />
+          {/* <Route path="borough/:boroughid/:id" element={<EditClinic clinics={clinics} /> } /> */}
        </Routes> 
   </div>
 )
