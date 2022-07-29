@@ -1,6 +1,23 @@
-.App {
+
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Nunito+Sans&family=Poiret+One&family=Rock+Salt&family=Space+Mono&display=swap');
+
+
+html {
+  font-family: 'Nunito Sans', sans-serif; 
   text-align: center;
+  background-image: url("https://c.neh.tw/thumb/f/720/3747bf9411fa40f19d03.jpg"), url("https://c.neh.tw/thumb/f/720/3747bf9411fa40f19d03.jpg");
+  /* background-repeat: repeat-x; */
+  /* background-position: bottom; */
+  background-position: right center, left center;
+  background-repeat: no-repeat;
+    /* position:fixed; */
+    /* top:0;
+    bottom:0;
+    left:0;
+    right:0; */
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -13,23 +30,62 @@
   }
 }
 
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: #ca8025;
+  background-color: #2989f7;
   padding: .5em;
-  min-height: 2em;
-  font-family: ‘Arial’; 
+  min-height: 3em;
   box-shadow: 0 1px 8px #ddd;
+
+
+
 }
+
+.navHome {
+  float: left;
+}
+
+.navLinks {
+  float: right;
+}
+
 .navbar a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  margin-left: 1em;
+  margin-left: 2em;
+  
+
 }
+
+.navbar a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 1em;
+  border-bottom: 3px solid red;
+}
+
+.navbar a.active {
+  border-bottom: 3px solid red;
+}
+
+
+/* .navHome { */
+  /* position: left; */
+  /* font-size: 1.5em;
+  margin: left;
+} */
+/* 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+} */
 
 
 .App-link {
@@ -49,11 +105,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .clinic-card {
   /* border: 2px solid black; */
-  width: 60vw;
+  width: 30vw;
   text-align: left;
   padding-left: 1vw;
   padding-right: 1vw;
@@ -64,8 +121,13 @@
   background-color: white;
   text-align: center;
   cursor: pointer;
-  background-color: #c8c8c0;
+  background-color: #dfdfce;
 }
+
+
+
+
+
 
 .borough-test {
   display: flex;
@@ -74,19 +136,25 @@
 }
 
 .borough {
-  width: 60vw;
+  width: 24vw;
+  height: 2vw;
   text-align: center;
+  padding-top: 2vw;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vw;
   margin-bottom: 1vh;
   display: flex;
   flex-direction: column;
-  background-color: white;
   text-align: center;
   cursor: pointer;
-  background-color: #c8c8c0;
+  background-color: #f3f3ec;
+  /* opacity: 0.9; */
+  box-shadow: 0 1px 6px rgba(1, 1, 1, 0.5), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  justify-content: center;
 }
+
 
 #clinicTitle {
   font-size: 1em;
@@ -97,3 +165,18 @@
   background-color:  #ffffff;
   border: 2px solid rgb(32, 116, 200);
 } */
+
+.aboutTitle {
+  font-size: 2em;
+}
+.aboutText {
+  max-width: 50%;
+  text-align: center;
+  padding-top: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vw;
+  margin-bottom: 1vh;
+  background-color: #c8c8c0;
+  cursor: pointer;
+}

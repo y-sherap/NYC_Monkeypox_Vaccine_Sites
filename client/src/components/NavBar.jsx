@@ -1,15 +1,20 @@
-// import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
   return (
     <nav className="navbar">
-      {/* <h4>Testingggg</h4> */}
+      <h2>testing</h2> 
       <div>
-        <Link to="/">Home</Link>
-        <Link to="about">About</Link>
-        <Link to="faq">FAQ</Link>
+        <div className="navHome">
+          <Link to="/">HOME</Link>
+        </div>
+        <div className="navLinks">
+          <Link to="about">ABOUT</Link>
+          <Link to="faq">FAQ</Link>
+          {/* <Link to="addclinic">ADD CLINIC</Link> */}
+        </div>
       </div>
     </nav>
   )
