@@ -76,7 +76,7 @@ html {
 .clinic-test {
   /* padding: 2em 4em; */
   display: grid;
-  grid-template-columns: repeat(2, 20vw);
+  grid-template-columns: repeat(3, 20vw);
   grid-gap: 2vw;
   cursor: pointer;
   text-align: center;
@@ -150,10 +150,6 @@ html {
 
 }
 
-.borough:hover {
-
-}
-
 
 #clinicTitle {
   font-size: 1em;
@@ -188,4 +184,9 @@ img {
 .editAndDeleteIcons {
   cursor: pointer;
 
+}
+
+
+.inputDiv {
+  margin-bottom: 3vh;
 }

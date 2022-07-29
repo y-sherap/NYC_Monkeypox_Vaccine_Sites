@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     const getBoroughs = async () => {
-      const response = await axios.get('http://localhost:3001/api/boroughs')
+      const response = await axios.get('/api/boroughs')
       console.log(response.data.boroughs)
       setBoroughs(response.data.boroughs)
       // narrowing down the data that i need to access from my database

@@ -18,7 +18,7 @@ const BoroughClinicDetails = (props) => {
   }, [props.boroughs, id])
 
   const getClinics = async () => {
-    const response = await axios.get(`http://localhost:3001/api/clinics/${id}`)
+    const response = await axios.get(`/api/clinics/${id}`)
     console.log(response.data.clinics)
     setClinics(response.data.clinics)
     // narrowing down the data that i need to access from my database
