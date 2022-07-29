@@ -46,7 +46,7 @@ const FormCard = (props) => {
 
   return (
     <div className="form">
-      <p className="addAClinicTitle">Add A Clinic</p>
+      <h3 className="addAClinicTitle">Add A Clinic</h3>
 
       <div className="input-div">
         <form onSubmit={handleSubmit}>
