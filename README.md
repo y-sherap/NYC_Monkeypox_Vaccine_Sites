@@ -18,10 +18,6 @@ Developed and deployed a full-stack web application that serves as a repository 
 
 View the project [here](ENTER HERUKO LINK).
 
-###### _Deployed Homepage_
-
-ADD VIDEO HERE
-
 ---
 
 #### _Technologies Used_
@@ -47,26 +43,31 @@ ADD VIDEO HERE
 ### **_Screenshots_**
 
 #### **Spec**
-![design](images/spec1.png)
-
-![spec2](images/spec2.png)
+![design](images/newspec.png)
 
 
 #### **Entity Relationship Diagram**
 
-![ERD](images/p2_ERD.png)
+![ERD](images/newERD.png)
 
 
 #### **Component Hierarchy Diagram**
 
-![CHD](images/new_component_hierarchy.png)
+![CHD](images/newCHD.png)
 
 
 ---
 
 #### _Future Updates_
 
+- [ ] Create a page to display reviews by clinic
 - [ ] Include live statistics of cases detected
+- [ ] Create a side bar
+- [ ] Add additional clinics
+
+
+#### **Spec of future iteration**
+![spec2](images/spec2.png)
 
 ---
 

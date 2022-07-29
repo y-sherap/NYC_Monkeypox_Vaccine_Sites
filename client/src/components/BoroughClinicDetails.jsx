@@ -27,7 +27,6 @@ const BoroughClinicDetails = (props) => {
     getClinics()
   }, [])
 
-
   return borough ? (
    
     <div className="detail">
@@ -38,8 +37,6 @@ const BoroughClinicDetails = (props) => {
         <div className="clinicform">
           <FormCard id={id} clinics={clinics} reloadClinicsPage={getClinics}/>
         </div>
-        <h3>Clinic List</h3>
-        <p>Schedule your vaccine appointment <a href='https://vax4nyc.nyc.gov/patient/s/monkeypox'>HERE</a></p>
         <div className="clinic-list">
           {/* BRING IN CLINIC */}
           {/* {props.clinics.map((clinic) => ( */}

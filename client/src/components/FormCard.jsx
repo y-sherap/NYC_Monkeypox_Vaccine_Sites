@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-const Form = (props) => {
+const FormCard = (props) => {
   const [name, setName] = useState('')
   const [location, setLocation] = useState('')
   const [hours, setHours] = useState('')
@@ -94,4 +94,4 @@ const Form = (props) => {
   )
 }
 
-export default Form
+export default FormCard

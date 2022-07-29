@@ -9,7 +9,7 @@ html {
   background-image: url("https://c.neh.tw/thumb/f/720/3747bf9411fa40f19d03.jpg"), url("https://c.neh.tw/thumb/f/720/3747bf9411fa40f19d03.jpg");
   /* background-repeat: repeat-x; */
   /* background-position: bottom; */
-  background-position: right center, left center;
+  background-position: right bottom, left bottom;
   background-repeat: no-repeat;
     /* position:fixed; */
     /* top:0;
@@ -17,7 +17,6 @@ html {
     left:0;
     right:0; */
 }
-
 
 .App-logo {
   height: 40vmin;
@@ -30,7 +29,6 @@ html {
   }
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -40,9 +38,6 @@ html {
   padding: .5em;
   min-height: 3em;
   box-shadow: 0 1px 8px #ddd;
-
-
-
 }
 
 .navHome {
@@ -58,8 +53,6 @@ html {
   color: white;
   font-weight: bold;
   margin-left: 2em;
-  
-
 }
 
 .navbar a:hover {
@@ -79,20 +72,16 @@ html {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .clinic-test {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  /* padding: 2em 4em; */
+  display: grid;
+  grid-template-columns: repeat(2, 20vw);
+  grid-gap: 2vw;
+  cursor: pointer;
+  text-align: center;
+  /* gap: .5em; */
+  justify-content: center;
 }
 
 .clinic-card {
@@ -100,32 +89,39 @@ html {
   height: 10vw;
   text-align: center;
   padding-top: 2vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-bottom: 1vw;
-  margin-bottom: 1vh;
-  display: flex;
+  padding-left: .5vw;
+  padding-right: .5vw;
+  padding-bottom: .5vw;
+  margin-bottom: 2vh;
+  /* display: flex;
   flex-direction: column;
-  text-align: center;
-  cursor: pointer;
-  background-color: #f3f3ec;
-  /* opacity: 0.9; */
+  text-align: center; */
   box-shadow: 0 1px 6px rgba(1, 1, 1, 0.5), 0 1px 4px rgba(0, 0, 0, 0.24);
-  background-color: #ffffff;
-  justify-content: center;
+  background-color: #fefefe;
+  /* justify-content: center; */
+  border-left: 3px solid rgb(235, 23, 235);
+
 }
 
+/* .park-list {
+  padding: 2em 4em;
+  display: grid;
+  grid-template-columns: repeat(2, 40vw);
+  grid-gap: 5vw;
+  cursor: pointer;
+  text-align: center;
+} */
+
+/* 
 .clinicValues {
   margin: 0;
-}
+} */
 
 .homeTitle {
-  margin-bottom: 1vh;
-  margin-top: 2vh;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+  color: 
 }
-
-
-
 
 .borough-test {
   display: flex;
@@ -135,9 +131,9 @@ html {
 
 .borough {
   width: 24vw;
-  height: 2vw;
+  height: 5vw;
   text-align: center;
-  padding-top: 2vw;
+  padding-top: 1vw;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vw;
@@ -146,11 +142,12 @@ html {
   flex-direction: column;
   text-align: center;
   cursor: pointer;
-  background-color: #f3f3ec;
-  /* opacity: 0.9; */
+  background-color: #fefefe;
   box-shadow: 0 1px 6px rgba(1, 1, 1, 0.5), 0 1px 4px rgba(0, 0, 0, 0.24);
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   justify-content: center;
+  border-left: 3px solid rgb(232, 235, 23);
+
 }
 
 .borough:hover {
@@ -163,3 +160,32 @@ html {
   font-weight: bold;
 }
 
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 20px;
+  height: 28px;
+
+
+}
+
+/* .editAndDeleteIcons {
+  display: flex;
+  border:rgba(0, 0, 0, 0.24)
+  /* object-position: right top;} */
+
+
+/* .editAndDeleteIcons a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 1em;
+  border-bottom: 3px solid rgb(232, 235, 23);
+} */ 
+.editAndDeleteIcons {
+  cursor: pointer;
+
+}

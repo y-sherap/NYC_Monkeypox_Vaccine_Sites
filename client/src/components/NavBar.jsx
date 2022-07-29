@@ -12,7 +12,6 @@ const NavBar = () => {
         </div>
         <div className="navLinks">
           <Link to="faq">FAQ</Link>
-          <Link to="addclinic">ADD CLINIC</Link>
         </div>
       </div>
     </nav>
