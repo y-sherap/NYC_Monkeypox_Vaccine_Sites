@@ -195,5 +195,6 @@ img {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-bottom: 3vh;
+  margin: 1vh;
+  padding: 1vh;
 }
