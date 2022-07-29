@@ -1,8 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const Form = (props) => {
   const [reviews, setReviews] = useState([])
+  const initialState = {
+    name: "",
+    date: "",
+    wait_time: "",
+    rating:"",
+  }
+
+  const [formState, setFormState] = useState(initialState)
 
   useEffect(() => {
     const getReviews = async () => {
