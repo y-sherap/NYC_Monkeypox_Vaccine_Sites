@@ -35,8 +35,9 @@ View the project [here](ENTER HERUKO LINK).
 ---
 
 #### _Project Overview_
+This application is built for a health systems administrator who is in charge of updating clinics currently administering the Monkeypox Vaccine. 
 
-
+The user is able to navigate between different boroughs and edit, delete, or add clinics.
 
 ---
 
