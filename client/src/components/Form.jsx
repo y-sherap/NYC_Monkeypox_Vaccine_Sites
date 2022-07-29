@@ -71,14 +71,18 @@ const Form = (props) => {
               name={'hours'}
               placeholder={'hours of operation'}
             />
-          <input
+            <select id="appttype">
+              <option value="appointmentOnly">Appointment Only</option>
+              <option value="walkIn">Walk In</option>
+            </select>
+          {/* <input
             type="text"
             value={appt_type}
             onChange={changeAppt_Type}
             name={'text'}
             placeholder={'appointment type'}
             className="apptType"
-          />
+          /> */}
             <button id="form-submit">Submit</button>
           </div>
           </form>
