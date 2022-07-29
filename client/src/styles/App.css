@@ -75,9 +75,9 @@ html {
 
 .clinic-test {
   /* padding: 2em 4em; */
-  display: grid;
-  grid-template-columns: repeat(3, 20vw);
-  grid-gap: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   text-align: center;
   /* gap: .5em; */
