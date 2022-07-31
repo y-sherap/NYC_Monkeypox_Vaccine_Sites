@@ -80,12 +80,6 @@ const FormCard = (props) => {
               name={'appt_type'}
               placeholder={'Appointment Type'}
             />
-
-            {/* <select id="appttype">
-              <option value="appointmentOnly">Appointment Only</option>
-              <option value="walkIn">Walk In</option>
-              onChange={}
-            </select> */}
             <button id="form-submit">Submit</button>
           </div>
           </form>
