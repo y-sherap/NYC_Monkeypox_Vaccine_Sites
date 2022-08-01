@@ -6,7 +6,7 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import FAQPage from './pages/FAQPage'
 import BoroughClinicDetails from './components/BoroughClinicDetails'
-// import EditClinic from './pages/EditClinic'
+import EditClinic from './pages/EditClinic'
 
 
 const App = () => {
