@@ -12,6 +12,7 @@ import BoroughClinicDetails from './components/BoroughClinicDetails'
 const App = () => {
 
   const [boroughs, setBoroughs] = useState([])
+  const [clinics, setClinics] =useState([])
 
   useEffect(() => {
     const getBoroughs = async () => {
@@ -41,6 +42,7 @@ return (
           }
           />
           {/* <Route path="borough/:boroughid/:id" element={<EditClinic clinics={clinics} /> } /> */}
+          <Route path="borough/:boroughid/:id" element={<EditClinic clinics={clinics} setClinics={setClinics}/> } />
        </Routes> 
   </div>
 )

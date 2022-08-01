@@ -27,21 +27,16 @@ const ClinicDetails = (props) => {
               <p id="appt-type">{clinic.appt_type}</p>
             </div>
             <div className="editAndDeleteIcons">
-              {/* <button className="editClinic">Edit</button> */}
-              <img src=" https://static.thenounproject.com/png/1044006-200.png" alt="edit"/>     
-              
+              <Link to={`borough/:boroughid/:id`}>  
+                <img src="https://static.thenounproject.com/png/1044006-200.png" 
+                alt="edit"/>     
+              </Link>
               <img src="https://static.thenounproject.com/png/1415718-200.png" 
-              alt="trashicon"
+                alt="trashicon"
                 className="deleteClinic"
                 onClick={() => deleteClinic(clinic._id)
                 }
               />
-              {/* <button 
-                className="deleteClinic"
-                onClick={() => deleteClinic(clinic._id)
-                }
-              
-              >Delete</button> */}
             </div>
           </div>
         </div>
@@ -51,4 +46,4 @@ const ClinicDetails = (props) => {
 }
 }
 
-export default ClinicDetails;
+export default ClinicDetails

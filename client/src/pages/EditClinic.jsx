@@ -23,8 +23,8 @@ const EditClinic = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // addClinic(e)
-    // navigate('/borough/:boroughid/:id')
+    addClinic(e)
+    navigate('/borough/:boroughid/:id')
     console.log(props.clinics)
   }
 
@@ -70,4 +70,4 @@ const EditClinic = (props) => {
   )
 }
 
-// export default EditClinic
+export default EditClinic
