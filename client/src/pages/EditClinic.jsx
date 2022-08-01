@@ -21,7 +21,7 @@ const EditClinic = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`borough/:boroughid/:id`)
+    await axios.put(`api/borough/:boroughid/:id`)
     // addClinic(e)
     navigate('/borough/:boroughid/:id')
     console.log(props.clinics)
