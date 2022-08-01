@@ -42,7 +42,7 @@ return (
           }
           />
           {/* <Route path="borough/:boroughid/:id" element={<EditClinic clinics={clinics} /> } /> */}
-          <Route path="/borough/:id/Lid}" element={<EditClinic clinics={clinics} setClinics={setClinics}/> } />
+          <Route path="/borough/:id/:id}" element={<EditClinic clinics={clinics} setClinics={setClinics}/> } />
        </Routes> 
   </div>
 )

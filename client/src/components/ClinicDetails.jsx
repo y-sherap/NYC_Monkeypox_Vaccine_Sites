@@ -29,7 +29,7 @@ const ClinicDetails = (props) => {
               <p id="appt-type">{clinic.appt_type}</p>
             </div>
             <div className="editAndDeleteIcons">
-              <Link to={`borough/:boroughid/:id`}>  
+              <Link to={`borough/:id/:id`}>  
                 <img src="https://static.thenounproject.com/png/1044006-200.png" 
                 alt="edit"/>     
               </Link>
