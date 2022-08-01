@@ -19,10 +19,10 @@ const EditClinic = (props) => {
   const { name, location, hours, appt_type, _id } = clinic
   // only render clinic if data is there
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    addClinic(e)
+    await axios.put(`borough/:boroughid/:id`)
+    // addClinic(e)
     navigate('/borough/:boroughid/:id')
     console.log(props.clinics)
   }
