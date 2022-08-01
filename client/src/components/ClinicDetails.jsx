@@ -1,8 +1,11 @@
 import axios from 'axios'
-// import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom"; 
+
 
 
 const ClinicDetails = (props) => {
+  // let { id } = useParams()
+ 
   let arr = []
   for (let i = 0; i < props.clinics.length; i++) {
     if (props.id === props.clinics[i].borough) {
@@ -29,10 +32,10 @@ const ClinicDetails = (props) => {
               <p id="appt-type">{clinic.appt_type}</p>
             </div>
             <div className="editAndDeleteIcons">
-              {/* <Link to={`borough/:id/:id`}>  
+              <Link to={clinic._id}>  
                 <img src="https://static.thenounproject.com/png/1044006-200.png" 
                 alt="edit"/>     
-              </Link> */}
+              </Link>
               <img src="https://static.thenounproject.com/png/1415718-200.png" 
                 alt="trashicon"
                 className="deleteClinic"

@@ -1,3 +1,94 @@
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
+const EditClinic = (props) => {
+
+  let { id } = useParams()
+
+  // let navigate = useNavigate()
+
+  const [clinic, setClinic] = useState({
+    name: '',
+    location: '',
+    hours: '',
+    appt_type: ''
+  })
+
+
+  const initialState = {
+    name: '',
+    location: '',
+    hours: '',
+    appt_type: ''
+  }
+
+  const [clinicState, setClinicState] = useState(initialState)
+
+  const getClinic = async () => {
+    let response = await axios.get(`http://localhost:3001/api/clinic/${id}`)
+    console.log(id)
+    setClinic(response.data.clinics)
+  }
+
+  useEffect(() => {
+    setClinic(initialState)
+    getClinic()
+  }, [])
+
+  const handleChange = (e) => {
+    e.preventDefault()
+    console.log(e.target.value)
+
+    setClinicState({ ...clinicState, [e.target.id]: e.target.value })
+    console.log(e.target)
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await axios.put(`http://localhost:3001/api/clinic/${id}`, clinicState)
+    // console.log(response)
+    setClinicState(initialState)
+  }
+
+  return (
+    <div>
+         <form onSubmit={handleSubmit}>
+
+      <div className="name">
+        <input
+          type="text"
+          name={'name'}
+          placeholder={'Clinic Name'}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name={'location'}
+          placeholder={'Address'}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name={'hours'}
+          placeholder={'Hours of Operation'}
+          onChange={handleChange}
+        />
+          <input
+          type="text"
+          name={'appt_type'}
+          placeholder={'Appointment Type'}
+          onChange={handleChange}
+        />
+        <button id="form-submit">Submit</button>
+      </div>
+</form>
+    </div>
+  )
+}
+
+export default EditClinic
+
+
 // import { useNavigate, useParams } from 'react-router-dom'
 // import { useState, useEffect } from 'react'
 // import axios from 'axios'
@@ -18,7 +109,7 @@
 
 //     useEffect(() => {
 //     const getClinic = async () => {
-//       const response = await axios.get(`/api/clinic/${props.id}`)
+//       const response = await axios.get(`/api/clinic/${id}`)
 //       console.log(response.data.clinic)
 //       setClinic(response.data.clinic)
 //     }
@@ -72,7 +163,7 @@
 // }
 
 // export default EditClinic
-____
+
 // original code
 
 
