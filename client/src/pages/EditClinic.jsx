@@ -1,10 +1,9 @@
-
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const EditClinic = (props) => {
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
   const [clinic, setClinic] = useState({})
 
   // need axios api request to find clinic
