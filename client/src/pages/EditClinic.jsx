@@ -1,13 +1,22 @@
+import { useNavigate, useParams } from 'react-router-dom'
+import { useState } from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 const EditClinic = (props) => {
-  let navigate = useNavigate()
-  const [clinic, setClinic] = useState({})
+  let { id } = useParams()
 
-  // need axios api request to find clinic
-  useEffect(() => {
+  let navigate = useNavigate()
+
+  const initialState = {
+    name: '',
+    location: '',
+    hours: '',
+    appt_type: ''
+  }
+
+  const [clinicDetails, setClinicDetails] = useState(initialState)
+
+    useEffect(() => {
     const getClinic = async () => {
       const response = await axios.get(`/api/clinic/${props.id}`)
       console.log(response.data.clinic)
@@ -16,56 +25,49 @@ const EditClinic = (props) => {
     getClinic()
   }, [props.id])
 
-  const { name, location, hours, appt_type, _id } = clinic
-  // only render clinic if data is there
+  const handleChange = (e) => {
+    setClinicDetails({ ...clinicDetails, [e.target.id]: e.target.value })
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`/api/clinics/${props.id}`)
-    // addClinic(e)
-    navigate('/clinics/${id}')
-    console.log(props.clinics)
+    let res = await axios.put(
+      `/clinics/${id}`, clinicDetails
+    )
+    setClinicDetails(initialState)
+    navigate('/borough/:id')
   }
 
-  return _id && (
+  return (
     <div>
-         <form onSubmit={handleSubmit}>
-
-      <div className="name">
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          defaultValue={name}
-
-          name={'name'}
-          placeholder={'Clinic Name'}
+          id="name"
+          value={clinicDetails.name}
+          onChange={handleChange}
         />
         <input
           type="text"
-          defaultValue={location}
-
-          name={'location'}
-          placeholder={'Address'}
+          id="location"
+          value={clinicDetails.location}
+          onChange={handleChange}
         />
         <input
           type="text"
-          defaultValue={hours}
-
-          name={'hours'}
-          placeholder={'Hours of Operation'}
+          id="hours"
+          value={clinicDetails.hours}
+          onChange={handleChange}
         />
-          <input
+        <input
           type="text"
-          defaultValue={appt_type}
-
-          name={'appt_type'}
-          placeholder={'Appointment Type'}
+          id="appt_type"
+          value={clinicDetails.appt_type}
+          onChange={handleChange}
         />
-
-        <button id="form-submit">Submit</button>
-      </div>
-</form>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-
   )
 }
 
