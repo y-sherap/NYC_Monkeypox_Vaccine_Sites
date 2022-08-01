@@ -13,9 +13,6 @@ const NavBar = () => {
         <div className="navLinks">
           <Link to="faq">FAQ</Link>
         </div>
-        <div className="navLinks">
-          <Link to="editClinic">EDIT CLINIC</Link>
-        </div>
       </div>
     </nav>
   )
