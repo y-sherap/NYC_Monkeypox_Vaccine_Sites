@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Link } from "react-router-dom"; 
+// import { Link } from "react-router-dom"; 
 
 
 const ClinicDetails = (props) => {
@@ -10,7 +10,7 @@ const ClinicDetails = (props) => {
     }
 
     const deleteClinic = async (id) => {
-    await axios.delete(`/api/clinics/${id}`)
+    await axios.delete(`http://localhost:3001/api/clinics/${id}`)
     props.reloadClinicsPage()
     }
 
@@ -29,10 +29,10 @@ const ClinicDetails = (props) => {
               <p id="appt-type">{clinic.appt_type}</p>
             </div>
             <div className="editAndDeleteIcons">
-              <Link to={`borough/:id/:id`}>  
+              {/* <Link to={`borough/:id/:id`}>  
                 <img src="https://static.thenounproject.com/png/1044006-200.png" 
                 alt="edit"/>     
-              </Link>
+              </Link> */}
               <img src="https://static.thenounproject.com/png/1415718-200.png" 
                 alt="trashicon"
                 className="deleteClinic"

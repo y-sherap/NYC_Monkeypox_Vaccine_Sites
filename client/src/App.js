@@ -6,7 +6,7 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import FAQPage from './pages/FAQPage'
 import BoroughClinicDetails from './components/BoroughClinicDetails'
-import EditClinic from './pages/EditClinic'
+// import EditClinic from './pages/EditClinic'
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     const getBoroughs = async () => {
-      const response = await axios.get('/api/boroughs')
+      const response = await axios.get(`http://localhost:3001/api/boroughs`)
       console.log(response.data.boroughs)
       setBoroughs(response.data.boroughs)
       // narrowing down the data that i need to access from my database
@@ -41,7 +41,7 @@ return (
           }
           />
           {/* <Route path="borough/:boroughid/:id" element={<EditClinic clinics={clinics} /> } /> */}
-          <Route path="/clinics/:id" element={<EditClinic clinics={clinics} /> } />
+          {/* <Route path="/clinics/:id" element={<EditClinic clinics={clinics} /> } /> */}
        </Routes> 
   </div>
 )

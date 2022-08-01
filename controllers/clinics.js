@@ -62,35 +62,6 @@ const updateClinic = async (req, res) => {
 }
 
 
-
-
-// const getClinicById = async (req, res) => {
-//   try {
-//       const { id } = req.params;
-//       const clinic = await Clinic.findById(id)
-//       if (clinic) {
-//           return res.status(200).json({ clinic });
-//       }
-//       return res.status(404).send('Borough with the specified ID does not exists');
-//   } catch (error) {
-//       return res.status(500).send(error.message);
-//   }
-// }
-
-// const getClinicByBoroughId = async (req, res) => {
-//   try {
-//       const (id) = req.params;
-//       const clinic = await Clinic.find(borough {'${id}'})
-//       if (clinic) {
-//           return res.status(200).json({ clinic });
-//       }
-//       return res.status(404).send('Borough with the specified ID does not exists');
-//   } catch (error) {
-//       return res.status(500).send(error.message);
-//   }
-// }
-
-
 module.exports = {
   getAllClinics,
   createClinic,
