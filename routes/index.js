@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const reviews = require('../controllers/reviews')
 const borough = require('../controllers/borough')
 const clinic = require('../controllers/clinics')
 const router = Router();

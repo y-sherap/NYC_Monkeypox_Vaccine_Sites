@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -6,14 +6,7 @@ const EditClinic = (props) => {
 
   let { id } = useParams()
 
-  // let navigate = useNavigate()
-
-  const [clinic, setClinic] = useState({
-    name: '',
-    location: '',
-    hours: '',
-    appt_type: ''
-  })
+  let navigate = useNavigate()
 
 
   const initialState = {
@@ -23,7 +16,8 @@ const EditClinic = (props) => {
     appt_type: ''
   }
 
-  const [clinicState, setClinicState] = useState(initialState)
+  // const [clinicState, setClinicState] = useState(initialState)
+  const [clinic, setClinic] = useState(initialState)
 
   const getClinic = async () => {
     let response = await axios.get(`http://localhost:3001/api/clinic/${id}`)
@@ -40,14 +34,15 @@ const EditClinic = (props) => {
     e.preventDefault()
     console.log(e.target.value)
 
-    setClinicState({ ...clinicState, [e.target.id]: e.target.value })
+    setClinic({ ...clinic, [e.target.id]: e.target.value })
     console.log(e.target)
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/api/clinic/${id}`, clinicState)
+    await axios.put(`http://localhost:3001/api/clinics/${id}`, clinic)
     // console.log(response)
-    setClinicState(initialState)
+    setClinic(initialState)
+    navigate(`/`)
   }
 
   return (
@@ -79,7 +74,7 @@ const EditClinic = (props) => {
           placeholder={'Appointment Type'}
           onChange={handleChange}
         />
-        <button id="form-submit">Submit</button>
+        <button type="submit">Submit</button>
       </div>
 </form>
     </div>
