@@ -31,10 +31,8 @@ const EditClinic = (props) => {
   }, [])
 
   const handleChange = (e) => {
-    e.preventDefault()
-    console.log(e.target.value)
 
-    setClinic({ ...clinic, [e.target.id]: e.target.value })
+    setClinic({ ...clinic, [e.target.name]: e.target.value })
     console.log(e.target)
   }
   const handleSubmit = async (e) => {
@@ -47,31 +45,34 @@ const EditClinic = (props) => {
 
   return (
     <div>
-         <form onSubmit={handleSubmit}>
+      <h2>Edit Clinic Details Below</h2>
+      
+      
+      <form onSubmit={handleSubmit}>
 
       <div className="name">
         <input
-          type="text"
-          name={'name'}
-          placeholder={'Clinic Name'}
+          type= 'text'
+          name= 'name'
+          placeholder='Clinic Name'
           onChange={handleChange}
         />
         <input
           type="text"
-          name={'location'}
-          placeholder={'Address'}
+          name='location'
+          placeholder='Address'
           onChange={handleChange}
         />
         <input
           type="text"
-          name={'hours'}
-          placeholder={'Hours of Operation'}
+          name='hours'
+          placeholder='Hours of Operation'
           onChange={handleChange}
         />
           <input
           type="text"
-          name={'appt_type'}
-          placeholder={'Appointment Type'}
+          name='appt_type'
+          placeholder='Appointment Type'
           onChange={handleChange}
         />
         <button type="submit">Submit</button>
