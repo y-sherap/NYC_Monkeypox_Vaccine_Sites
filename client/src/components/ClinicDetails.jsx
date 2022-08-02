@@ -13,7 +13,7 @@ const ClinicDetails = (props) => {
     }
 
     const deleteClinic = async (id) => {
-    await axios.delete(`http://localhost:3001/api/clinics/${id}`)
+    await axios.delete(`/api/clinics/${id}`)
     props.reloadClinicsPage()
     }
 

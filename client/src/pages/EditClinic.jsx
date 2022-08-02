@@ -16,11 +16,11 @@ const EditClinic = (props) => {
     appt_type: ''
   }
 
-  // const [clinicState, setClinicState] = useState(initialState)
+
   const [clinic, setClinic] = useState(initialState)
 
   const getClinic = async () => {
-    let response = await axios.get(`http://localhost:3001/api/clinic/${id}`)
+    let response = await axios.get(`/api/clinic/${id}`)
     console.log(id)
     setClinic(response.data.clinics)
   }
@@ -37,7 +37,7 @@ const EditClinic = (props) => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/api/clinics/${id}`, clinic)
+    await axios.put(`/api/clinics/${id}`, clinic)
     // console.log(response)
     setClinic(initialState)
     navigate(`/`)

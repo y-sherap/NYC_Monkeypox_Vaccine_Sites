@@ -9,7 +9,7 @@ const FormCard = (props) => {
 
 // await suspends execution until returned promise is fulfilled
   const addClinic = async (e) => {
-    await axios.post('http://localhost:3001/api/clinics/' + props.id, {
+    await axios.post('/api/clinics/' + props.id, {
       name: name,
       location: location,
       hours: hours,
