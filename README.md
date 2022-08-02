@@ -4,7 +4,7 @@
 
 #### By: Yangtsel Sherap
 
-**[Deployed Website](https://boiling-beach-15847.herokuapp.com/borough/62dff96edb397f1ee0accc8c) | [GitHub](https://github.com/y-sherap) | [LinkedIn](https://www.linkedin.com/in/yangtsel-sherap-51605947/) | [Trello](https://trello.com/b/pHVFTTdq/project-2)**
+**[Deployed Website](https://boiling-beach-15847.herokuapp.com/) | [GitHub](https://github.com/y-sherap) | [LinkedIn](https://www.linkedin.com/in/yangtsel-sherap-51605947/) | [Trello](https://trello.com/b/pHVFTTdq/project-2)**
 
 ---
 
@@ -16,7 +16,7 @@
 
 Developed and deployed a full-stack web application that serves as a repository for current Monkeypox vaccination sites in NYC.
 
-View the project [HERE](https://boiling-beach-15847.herokuapp.com/borough/62dff96edb397f1ee0accc8c).
+View the project [HERE](https://boiling-beach-15847.herokuapp.com/).
 
 ---
 
